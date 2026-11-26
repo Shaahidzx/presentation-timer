@@ -300,7 +300,7 @@ $("login").onsubmit = async e => {
 };
 
 // Open the page with #admin to log in. Everyone else is a viewer.
-if (location.hash === "#admin") {
+if (location.hash.toLowerCase().startsWith("#admin")) { // tolerates "#admin." from a copied sentence
   let ok = false; try { ok = sessionStorage.getItem("timer-admin-ok") === "1"; } catch {}
   if (ok) enterAdmin(); else { $("login").hidden = false; $("pin").focus(); }
 } else {

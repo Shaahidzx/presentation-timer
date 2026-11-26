@@ -1,6 +1,7 @@
 {
   "hosting": {
     "public": ".",
-    "ignore": ["firebase.json", ".firebaserc", ".gitignore", "ADMIN-PIN.txt", "**/.*"]
+    "ignore": ["firebase.json", ".firebaserc", ".gitignore", "ADMIN-PIN.txt", "**/.*"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
   }
 }
